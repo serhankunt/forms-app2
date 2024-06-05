@@ -1,0 +1,135 @@
+/* Genel form stili */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Başlık stili */
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Form elemanları ve etiketler */
+form div {
+    margin-bottom: 15px;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Girdi alanları */
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #009879;
+    outline: none;
+}
+
+/* Buton stili */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not([disabled]) {
+    background-color: #007a60;
+}
+
+/* Ayırıcı stil */
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* Tablonun genel stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Tablonun başlığı */
+thead th {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Tablonun gövdesi */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Satır üzerine gelindiğinde arka plan rengi değişimi */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tablo hücrelerinin genel stili */
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* İlk sütun (numara) için özel stil */
+td:first-child {
+    text-align: center;
+    width: 50px;
+}
+
+/* Butonun stili */
+button.btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,94 @@
+<h1>NgForm ile Persone Projesi</h1>
+<div>
+  <form #addForm="ngForm" (ngSubmit)="save(addForm)" autocomplete="off">
+    <div>
+      <label for="">Personel Adı</label>
+      <input name="name" [(ngModel)]="addModel.name" required minlength="3">
+    </div>
+    <div>
+      <label for="">Bölümü</label>
+      <select name="profession" [(ngModel)]="addModel.profession" required>
+        <option value="muhendis">Mühendislik</option>
+        <option value="yazilim">Yazılım</option>
+        <option value="istatistik">İstatistik</option>
+      </select>
+    </div>
+    <div>
+      <label for="">İşe Giriş Tarihi</label>
+      <input [(ngModel)]="addModel.startingDate" name="startingDate" type="date" required>
+    </div>
+    <div>
+      <button [disabled]="!addForm.valid">Kaydet</button>
+    </div>
+  </form>
+  <hr>
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Personel Adı</th>
+          <th>Bölümü</th>
+          <th>İşe giriş tarihi</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          @for(e of employees; track e;){
+          <td>{{$index}}</td>
+          <td>{{e.name}}</td>
+          <td>{{e.profession}}</td>
+          <td>{{e.startingDate}}</td>
+          <td><button (click)="get(addModel,$index)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Güncelle
+            </button></td>
+          }
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+</div>
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Personel Güncelleme İşlemi</h1>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <form #updateForm="ngForm" (ngSubmit)="update(updateForm)" autocomplete="off" >
+          <div>
+            <div>
+              <label for="">Personel Adı</label>
+            </div>
+            <input name="name" [(ngModel)]="updateModel.name" required minlength="3">
+          </div>
+          <div>
+            <label>Bölümü</label>
+            <select name="profession" [(ngModel)]="updateModel.profession" required>
+              <option value="muhendis">Mühendislik</option>
+              <option value="yazilim">Yazılım</option>
+              <option value="istatistik">İstatistik</option>
+            </select>
+          </div>
+          <div>
+            <label for="">İşe Giriş Tarihi</label>
+            <input [(ngModel)]="updateModel.startingDate" name="startingDate" type="date" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button (click)="update(updateForm)" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
