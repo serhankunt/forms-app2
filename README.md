@@ -11,6 +11,6 @@ Bu projede Angular 17 kullanarak bir personel yönetim sistemi geliştirdim. Uyg
 
 ## Teknolojiler
 
-- **Angular 17**: Ön uç geliştirme için kullanıldı.
-- **TypeScript**: Angular uygulamalarında tip güvenli programlama için kullanıldı.
-- **HTML & CSS**: Kullanıcı arayüzü tasarımı için kullanıldı.
+- **Angular 17**
+- **TypeScript**
+- **HTML & CSS**
