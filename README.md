@@ -1,5 +1,16 @@
-#Form App 2
-Bu projede Angular 17 ile personel yönetimi gerçekleştiren proje gerçekleştirdim.
-.Kullanıcı oluşturma
-.Kullanıcı güncelleme
-Kullanıcı güncelleştirirken bir modal açılıyor. Değişiklikler gerçekleştikten sonra değişiklikleri kaydederek güncelleme işlemini tamamlıyoruz.
+# Form App 2 - Personel Yönetim Sistemi
+
+Bu projede Angular 17 kullanarak bir personel yönetim sistemi geliştirdim. Uygulama, kullanıcı oluşturma ve kullanıcı güncelleme gibi temel personel yönetim işlevlerini içerir. Kullanıcı güncellemeleri, bir modal (açılır pencere) aracılığıyla gerçekleştirilir ve değişiklikler kaydedildikten sonra güncelleme işlemi tamamlanır.
+
+## Özellikler
+
+- **Kullanıcı Oluşturma**: Yeni kullanıcılar ekleyebilirsiniz.
+- **Kullanıcı Güncelleme**: Mevcut kullanıcı bilgilerini güncelleyebilirsiniz.
+  - Kullanıcı güncelleme işlemi, bir modal açılarak yapılır.
+  - Değişiklikler yapıldıktan sonra kaydedilerek güncelleme tamamlanır.
+
+## Teknolojiler
+
+- **Angular 17**: Ön uç geliştirme için kullanıldı.
+- **TypeScript**: Angular uygulamalarında tip güvenli programlama için kullanıldı.
+- **HTML & CSS**: Kullanıcı arayüzü tasarımı için kullanıldı.
